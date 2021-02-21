@@ -5,6 +5,7 @@ export const getPublicUrl = once((): string => {
     .querySelector("base")
     ?.getAttribute("href")
     ?.replace(/\/$/, "");
+  console.log(publicUrl);
   if (!publicUrl || publicUrl === "__PUBLIC_URL_PLACEHOLDER__") return "";
   return publicUrl;
 });
